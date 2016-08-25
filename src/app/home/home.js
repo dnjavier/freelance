@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import {HpHead} from './home/hp-head/hp-head';
-import {Services} from './home/services/services';
-import {Description} from './home/description/description';
-import {WTextImg} from './widgets/w-text-img/w-text-img';
-import {Header} from './header';
-import {Title} from './title';
-import {Techs} from './techs/techs';
-import {Footer} from './footer';
+import {HpHead} from './hp-head/hp-head';
+import {Services} from './services/services';
+import {Description} from './description/description';
+import {WTextImg} from '../widgets/w-text-img/w-text-img';
+import {Footer} from '../footer';
 
 const styles = {
   container: {
@@ -21,7 +18,7 @@ const styles = {
   }
 };
 
-export class Main extends Component {
+export class Home extends Component {
   constructor() {
     super();
     this.state = {title:"Web Agency"};

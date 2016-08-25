@@ -36,16 +36,13 @@ export class HpHead extends Component {
         <div className="svg-centered">
             <svg>
                 <symbol id="text-copy">
-                    <text textAnchor="middle"
-                        x="50%"
-                        y="50%"
-                        className="text--line"
-                        >
-                    {this.props.hpTitle}
+                    <text textAnchor="middle" x="50%" y="50%" className="text--line">
+                        {this.props.hpTitle}
                     </text>
                 </symbol>
                 <g className='g-ants'>
-                    <use xlinkHref='#text-copy' className='text-copy' id='outline'></use><use xlinkHref='#text-copy' className='text-copy' id='fill'></use>
+                    <use xlinkHref='#text-copy' className='text-copy' id='outline'></use>
+                    <use xlinkHref='#text-copy' className='text-copy' id='fill'></use>
                 </g>                    
             </svg>     
         </div>

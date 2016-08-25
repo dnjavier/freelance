@@ -28,7 +28,7 @@ export class Services extends Component {
 
   componentDidMount() {
     axios
-      .get('app/homepage/services/services.json')
+      .get('app/home/services/services.json')
       .then(response => {
         this.setState({services: response.data});
       });
