@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {WText} from '../../widgets/w-text/w-text';
 
 const styles = {
 
@@ -12,12 +13,7 @@ export class Description extends Component {
 
   render() {
     return (
-      <div className="container fullscreen w-light rotated-line">
-        <h2 className="main-title">
-            Description
-        </h2>
-        
-      </div>
+      <WText />
     );
   }
 }
