@@ -4,10 +4,6 @@ import axios from 'axios';
 import {Service} from './service';
 
 const styles = {
-  container: {
-    margin: '1rem',
-    minHeight: '100vh'
-  },
   h2: {
     fontWeight: 300,
     fontSize: '1.5rem'
@@ -36,7 +32,7 @@ export class Services extends Component {
 
   render() {
     return (
-      <div style={styles.container}>
+      <div className="container fullscreen">
         <h2 style={styles.h2}>
           Services:
         </h2>

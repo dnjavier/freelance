@@ -10,6 +10,9 @@ const styles = {
       position: 'absolute',
       backgroundColor: 'rgba(27, 38, 60, 0.85)',
       zIndex: -9
+  },
+  container: {
+      padding: 0
   }
 };
 
@@ -21,7 +24,7 @@ export class HpHead extends Component {
 
   render() {
     return (
-      <div className="container-fullscreen">
+      <div style={styles.container} className="container fullscreen">
         <div>
             <img style={styles.img} className="img-fullscreen" src="./assets/homepage/hp-head.jpg" />
             <div style={styles.mask} ></div>

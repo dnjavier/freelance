@@ -12,7 +12,7 @@ export class Description extends Component {
 
   render() {
     return (
-      <div className="container-fullscreen w-light rotated-line">
+      <div className="container fullscreen w-light rotated-line">
         <h2 className="main-title">
             Description
         </h2>

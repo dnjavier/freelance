@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {HpHead} from './hp-head/hp-head';
 import {Services} from './services/services';
 import {Description} from './description/description';
-import {WTextImg} from '../widgets/w-text-img/w-text-img';
+import {WImgText} from '../widgets/w-img-text/w-img-text';
 import {Footer} from '../footer';
 
 const styles = {
@@ -31,7 +31,7 @@ export class Home extends Component {
           <HpHead hpTitle={this.state.title} />
           <Services />
           <Description />
-          <WTextImg />
+          <WImgText />
         </main>
         <Footer/>
       </div>

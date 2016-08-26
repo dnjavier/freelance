@@ -13,18 +13,15 @@ export class WTextImg extends Component {
 
   render() {
     return (
-      <div className="container-fullscreen aligner">
-        <div className="w-light">
-          <h2>
-              Work
-          </h2>
-          <div className="aligner">
-            <div className="col-sm-6 aligner-item">
+      <div className="container fullscreen vcenter">
+        <div className="w-light container">
+          <div className="row vcenter">
+            <div className="col-md-6">
               <h2>Titulo</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam magni, eos veritatis veniam! Provident voluptatem a, explicabo temporibus quibusdam omnis facere nisi aliquam inventore voluptate voluptas, dolorum libero hic aspernatur!</p>
-              <Link to="/work" className="btn btn-main">see work</Link>
+              <Link to="/work" className="btn btn-main">See work</Link>
             </div>
-            <div className="col-sm-6">
+            <div className="col-md-6">
               <img className="wow slideInLeft img-responsive center-block" src="./assets/iphone.png" />
             </div> 
           </div>

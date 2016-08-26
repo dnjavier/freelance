@@ -1,35 +1,66 @@
+/*
+VARIABLES
+*/
+$neon-color: #ccff00;
+$darkest-color: black;
+$yankees-color: #1b263c;
+$charcoal-color: #313c53;
+$pastel-color: #b6c0d2;
+$lightest-color: #fff;
+
+$big-font: 'Poppins';
+$small-font: 'Work Sans';
+
+$p-font-size: 18px;
+
+//Breakpoints
+$screen-xs: 540px;
+$screen-md: 768px; 
+$screen-bg: 850px;
+$screen-lg: 1200px;
+
+
 html, body, #root {
   margin: 0;
   height: 100%;
-  font-family: 'Work Sans', sans-serif;
+  font-family: $small-font, sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: $big-font, sans-serif;
 }
 
 body, h1, h2, h3 {
-  font-weight: 300
+  font-weight: 300;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+h2 {
+  font-size: 4.5rem;
+  line-height: 43px;
+  letter-spacing: -2px;
+}
 
-  &:hover {
-    color: #5aadbb;
-  }
+p {
+  font-size: $p-font-size;
 }
 
 .center-block {
    margin-left:auto;
    margin-right:auto;
-   display:center;
+}
+
+.vcenter {
+  @media (min-width: $screen-md) { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 .main-title {
   text-align: center;
-  color: #ccff00;
+  color: $neon-color;
   margin-top: 35vh;
   font-size: 6rem;
   font-family: 'Poppins', sans-serif;
@@ -37,8 +68,8 @@ a {
   letter-spacing: -5px;
 }
 
-.container-fullscreen {
-  height: 100vh;
+.container.fullscreen {
+  min-height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -62,7 +93,6 @@ a {
     transform: rotate(-25deg);
     content: "";
     position: absolute;
-    width: 100%;
     height: 90vh;
     z-index: -1;
     margin-left: -50%;
@@ -85,7 +115,7 @@ a {
 
 #outline {
   fill: none;
-  stroke:#CCFF00;
+  stroke: $neon-color;
   stroke-dasharray:100%;
   stroke-dashoffset:0;
   animation-name: outline;
@@ -96,7 +126,7 @@ a {
 
 #fill {
   fill-opacity: 0;
-  fill:#CCFF00;
+  fill: $neon-color;
   animation-name: fill;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
@@ -139,13 +169,12 @@ a {
 style for light background widget
 */
 .w-light {
-  background-color: #b6c0d2;
 
   &.rotated-line {
     background-color: transparent;
     
     &:before {
-      background-color: #b6c0d2;
+      background-color: $pastel-color;
     }
   }
 }
@@ -154,13 +183,13 @@ style for light background widget
 style for dark background widget
 */
 .w-dark {
-  background-color: #1b263c;
+  background-color: $yankees-color;
 
   &.rotated-line {
     background-color: transparent;
 
     &:before {
-      background-color: #1b263c;
+      background-color: $yankees-color;
     }
   }
 }
@@ -168,23 +197,59 @@ style for dark background widget
 .btn {
   border-radius: 0;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2rem;
-  color: black;
+  color: $darkest-color;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
   text-align: center;
   padding: 15px 0;
   width: 300px;
-  margin-top: 40px;
+  margin: 40px 0 80px;
+  transition: background-color 0.5s ease;
 
-  &:hover, &:focus, &:active {
+  &:hover, 
+  &:focus, 
+  &:active {
     text-decoration: none;
-    color: black;
+    color: $darkest-color;
+    transition: background-color 0.5s ease;
   }
 }
 
 .btn-main {
-  background-color: #ccff00;
+  background-color: $neon-color;
+  
+  &:hover, &:focus, &:active {
+    background-color: $yankees-color;
+    color: $neon-color;
+  }
+}
+
+.w-light, .w-dark {
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+
+    @media (min-width: $screen-xs) {
+      display: inline-block;
+      width: 300px;
+    }
+  }
+
+  img {
+    max-width: 65%;
+
+    @media (min-width: $screen-xs) {
+      max-width: 100%;
+    }
+  }
+
+  >.row {
+    max-width: $screen-lg;
+  }
 }
