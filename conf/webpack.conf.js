@@ -30,6 +30,14 @@ module.exports = {
           'react-hot',
           'babel'
         ]
+      },
+      { 
+        test: /vendor\/.+\.(jsx|js)$/,
+        loader: 'imports?jQuery=jquery,$=jquery,this=>window'
+      },
+      {
+        test: require.resolve('../src/libraries/wow.js'), 
+        loader: 'exports?this.WOW'
       }
     ]
   },

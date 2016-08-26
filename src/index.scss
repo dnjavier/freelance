@@ -1,7 +1,11 @@
 html, body, #root {
   margin: 0;
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
 }
 
 body, h1, h2, h3 {
@@ -17,6 +21,12 @@ a {
   }
 }
 
+.center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:center;
+}
+
 .main-title {
   text-align: center;
   color: #ccff00;
@@ -25,6 +35,17 @@ a {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   letter-spacing: -5px;
+}
+
+.container-fullscreen {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &.rotated-line {
+    overflow: visible;
+  }
 }
 
 .img-fullscreen {
@@ -42,9 +63,10 @@ a {
     content: "";
     position: absolute;
     width: 100%;
-    background-color: #b6c0d2;
     height: 90vh;
     z-index: -1;
+    margin-left: -50%;
+    width: 200%;
   }
 }
 
@@ -64,7 +86,7 @@ a {
 #outline {
   fill: none;
   stroke:#CCFF00;
-  stroke-dasharray:1200;
+  stroke-dasharray:100%;
   stroke-dashoffset:0;
   animation-name: outline;
   animation-duration: 2.5s;
@@ -85,7 +107,7 @@ a {
 
 @keyframes outline{
   from{
-    stroke-dashoffset:1200;
+    stroke-dashoffset:100%;
   }
   
   to{
@@ -101,4 +123,68 @@ a {
   to{
     fill-opacity: 1;
   }
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-item {
+  max-width: 50%;
+}
+
+/*
+style for light background widget
+*/
+.w-light {
+  background-color: #b6c0d2;
+
+  &.rotated-line {
+    background-color: transparent;
+    
+    &:before {
+      background-color: #b6c0d2;
+    }
+  }
+}
+
+/*
+style for dark background widget
+*/
+.w-dark {
+  background-color: #1b263c;
+
+  &.rotated-line {
+    background-color: transparent;
+
+    &:before {
+      background-color: #1b263c;
+    }
+  }
+}
+
+.btn {
+  border-radius: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  width: 300px;
+  margin-top: 40px;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.btn-main {
+  background-color: #ccff00;
 }

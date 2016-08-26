@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
 
 const styles = {
-  container: {
-    height: '100vh',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden'
-  },
   img: {
       zIndex: -10
   },
@@ -27,7 +21,7 @@ export class HpHead extends Component {
 
   render() {
     return (
-      <div style={styles.container}>
+      <div className="container-fullscreen">
         <div>
             <img style={styles.img} className="img-fullscreen" src="./assets/homepage/hp-head.jpg" />
             <div style={styles.mask} ></div>
